@@ -25,6 +25,7 @@ public class Character {
     this.stats[0] = rand.nextInt(500); // stats: HP
     this.stats[1] = rand.nextInt(100); // stats: strength
     this.stats[2] = rand.nextInt(100); // stats: mana
+    this.stats[3] = rand.nextInt(100); // stats: speed
     this.location[0] = spawnLocation[0]; // location: x coordinate
     this.location[1] = spawnLocation[1]; // location: y coordinate
   }
@@ -56,19 +57,19 @@ public class Character {
   //Move Methods
   public boolean moveUp() {
     this.location[1] += this.stats[3];
-    return(True);
+    return true;
   }
   public boolean moveDown() {
     this.location[1] -= this.stats[3];
-    return(True);
+    return true;
   }
   public boolean moveRight() {
     this.location[0] += this.stats[3];
-    return(True);
+    return true;
   }
   public boolean moveLeft() {
     this.location[0] -= this.stats[3];
-    return(True);
+    return true;
   }
   
 }
