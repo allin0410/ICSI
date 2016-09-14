@@ -1,9 +1,9 @@
-//import java.util.Math;
+import java.util.Random;
 
 public class Character {
   // Properties:
   // HP, strength, mana
-  private int[] stats = new int[3];
+  private int[] stats = new int[4];
   // current location of Character, x, y coordinate
   private int[] location = new int[2];
   // location where Character stars: x,y coordinate
@@ -18,14 +18,15 @@ public class Character {
     
   }
   
-  @Override
+  /*@Override*/
   public Character(int[] spawnLocation) {
-    this.spawnLocation = spawnLocation;
-   this.stats[0] = Math.random();
-     this.stats[1] = Math.random();
-     this.stats[2] = 
-     this.location[0] =
-     this.location[1] =
+    Random rand = new Random(); // generates random integers
+    this.spawnLocation = spawnLocation; // starting position
+    this.stats[0] = rand.nextInt(500); // stats: HP
+    this.stats[1] = rand.nextInt(100); // stats: strength
+    this.stats[2] = rand.nextInt(100); // stats: mana
+    this.location[0] = spawnLocation[0]; // location: x coordinate
+    this.location[1] = spawnLocation[1]; // location: y coordinate
   }
   // Methods: 
   
@@ -39,19 +40,35 @@ public class Character {
   public int[] getSpawnLocation(){
     return this.spawnLocation;
   }
-  /*stats
-   * location
-   * spawnlocation*/
+
   
   public void setStats(int[] setStats){
-    this.stats;
+    this.stats = stats;
   }
   public void setLocation(int[] setLocation){
-    this.location;
+    this.location = location;
   }
   public void setSpawnLocation(int[] spawnLocation){
-    this.spawnLocation;
+    this.spawnLocation = spawnLocation;
   }
   
+  
+  //Move Methods
+  public boolean moveUp() {
+    this.location[1] += this.stats[3];
+    return(True);
+  }
+  public boolean moveDown() {
+    this.location[1] -= this.stats[3];
+    return(True);
+  }
+  public boolean moveRight() {
+    this.location[0] += this.stats[3];
+    return(True);
+  }
+  public boolean moveLeft() {
+    this.location[0] -= this.stats[3];
+    return(True);
+  }
   
 }
