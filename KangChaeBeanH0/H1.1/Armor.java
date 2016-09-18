@@ -1,4 +1,3 @@
-// Name: Johnny Zavala            ID: 001161399
 public class Armor extends Item
 {
   /*Declares instance variables*/
